@@ -1,0 +1,16 @@
+<div class="withdraw-container">
+    <h2>Withdraw Funds</h2>
+  
+    <!-- Go Back Button -->
+    <button (click)="goBackToDashboard()" class="back-button">Go Back</button>
+  
+    <!-- Withdraw Form -->
+    <form [formGroup]="withdrawForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Amount</label>
+        <input formControlName="amount" type="number" placeholder="Enter amount..." />
+      </div>
+  
+      <button type="submit" [disabled]="withdrawForm.invalid">Submit</button>
+    </form>
+  </div>

@@ -1,0 +1,27 @@
+<div class="account-info-container">
+    <div *ngIf="email" class="account-info-card">
+      <h2>Account Information</h2>
+      <div class="info-section">
+        <div class="info-row">
+          <span class="info-label">First Name:</span>
+          <span class="info-value">{{ firstname }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Last Name:</span>
+          <span class="info-value">{{ lastname }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Email:</span>
+          <span class="info-value">{{ email }}</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Mobile Number:</span>
+          <span class="info-value">{{ mobilenumber }}</span>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="!email" class="loading-message">
+      <p>Loading account information...</p>
+    </div>
+  </div>

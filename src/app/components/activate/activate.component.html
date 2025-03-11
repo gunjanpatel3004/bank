@@ -1,0 +1,14 @@
+<div class="login-container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <form [formGroup]="activateForm" (ngSubmit)="onSubmit()">
+      <label>Email</label>
+      <input formControlName="email" type="email" placeholder="Enter your email..." />
+
+      <label>Code</label>
+      <input formControlName="activationCode" type="text" placeholder="Enter your code..." />
+
+      <button type="submit">Activate</button>
+    </form>
+  </div>
+</div>

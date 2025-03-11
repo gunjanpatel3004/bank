@@ -1,0 +1,26 @@
+<div class="transfer-container">
+    <h2>Transfer Funds</h2>
+  
+    <!-- Go Back Button -->
+    <button (click)="goBackToDashboard()" class="back-button">Go Back</button>
+  
+    <!-- Transfer Form -->
+    <form [formGroup]="transferForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label>Amount</label>
+        <input formControlName="amount" type="number" placeholder="Enter amount..." />
+      </div>
+  
+      <div class="form-group">
+        <label>Message</label>
+        <input formControlName="message" type="text" placeholder="Enter message..." />
+      </div>
+  
+      <div class="form-group">
+        <label>Recipient Email</label>
+        <input formControlName="account" type="email" placeholder="Enter recipient email..." />
+      </div>
+  
+      <button type="submit" [disabled]="transferForm.invalid">Submit</button>
+    </form>
+  </div>

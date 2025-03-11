@@ -1,0 +1,23 @@
+<div class="transaction-list">
+  <h2>Transaction History</h2>
+<!-- Go Back Button -->
+<button (click)="goBackToDashboard()" class="back-button">Go Back</button>
+  <!-- Display transactions if available -->
+  <div *ngIf="transactions.length > 0">
+    <div *ngFor="let transaction of transactions" class="transaction-card">
+      <div class="transaction-details">
+        <p><strong>Amount:</strong> {{ transaction.amount | currency }}</p>
+        <p><strong>Date:</strong> {{ transaction.dateTime | date: 'medium' }}</p>
+        <p><strong>From Account:</strong> {{ transaction.fromAccount?.email }}</p>
+        <p><strong>To Account:</strong> {{ transaction.toAccount?.email }}</p>
+        <p><strong>Type:</strong> {{ transaction.type }}</p>
+        <p><strong>Message:</strong> {{ transaction.message }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display message if no transactions are found -->
+  <div *ngIf="transactions.length === 0" class="no-transactions">
+    <p>No transactions found.</p>
+  </div>
+</div>

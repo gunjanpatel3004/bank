@@ -1,0 +1,21 @@
+<div class="account-container">
+  <div *ngIf="accounts.length > 0">
+    <!-- Go Back Button -->
+    <button (click)="goBackToDashboard()" class="back-button">Go Back</button>
+    
+    <h3>Users List:</h3>
+    <div *ngFor="let account of accounts" class="account-card">
+      <p><strong>Account ID:</strong> {{ account.accountId }}</p>
+      <p>
+        <strong>Name:</strong> {{ account.firstName }} {{ account.lastName }}
+      </p>
+      <p><strong>Email:</strong> {{ account.email }}</p>
+      <p><strong>Phone:</strong> {{ account.mobilePhone }}</p>
+      <hr />
+    </div>
+  </div>
+
+  <div *ngIf="accounts.length === 0">
+    <p>No account information available.</p>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="register-container">
+    <div class="register-card">
+      <h2>Register</h2>
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <label>First Name</label>
+        <input formControlName="firstName" type="text" placeholder="Enter your first name..." />
+  
+        <label>Last Name</label>
+        <input formControlName="lastName" type="text" placeholder="Enter your last name..." />
+  
+        <label>Email</label>
+        <input formControlName="email" type="email" placeholder="Enter your email..." />
+  
+        <label>Phone</label>
+        <input formControlName="mobilePhone" type="tel" placeholder="Enter your phone number..." />
+  
+        <label>Password</label>
+        <input formControlName="password" type="password" placeholder="Enter your password..." />
+  
+        <button type="submit">Register</button>
+      </form>
+      <button (click)="goBackToLogin()">Back to Login</button> <!-- Add back to login button -->
+    </div>
+  </div>
